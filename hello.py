@@ -81,3 +81,78 @@
 # print(l)
 # print(t)
 
+
+### Question 5    5/23-1
+# Define a class which has at least two methods:
+# getString: to get a string from console input
+# printString: to print the string in upper case.
+# Also please include simple test function to test the class methods.
+
+# class TwoMethod(object):
+#     def getString(self, name):
+#         self.name = name
+#         return name
+#     def printString(self, name):
+#         print(self.name)
+
+#solution
+# class TwoMethod(object):
+#         def getString(self,name):
+#             self.s = input()
+#
+#         def printString(self):
+#             print(self.s.upper())
+#
+# strOBJ = TwoMethod()
+# strOBJ.getString()
+# strOBJ.printString()
+
+
+# Question 6:   5/23-2
+# Write a program that calculates and prints the value according to the given formula:
+# Q = Square root of [(2 * C * D)/H]
+# Following are the fixed values of C and H:
+# C is 50. H is 30.
+# D is the variable whose values should be input to your program in a comma-separated sequence.
+# Example
+# Let us assume the following comma separated input sequence is given to the program:
+# 100,150,180
+# The output of the program should be:
+# 18,22,24
+# import math
+#
+# C, H = 50, 30
+#
+# str = input()
+#
+# D = str.split(',')
+#
+# for i in D:
+#     Q = math.sqrt(int((2 * C * D)/int(H)),2)
+#     print(Q)
+
+#solution
+# import math
+#
+# c, h = 50, 30
+# value = []
+#
+# items = [x for x in input().split(',')]
+
+# for d in items:
+#     value.append(str(int(round(math.sqrt(2*c*float(d)/h)))))
+# print(','.join(value))
+
+
+# Question:   5/23-3
+# Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array.
+# The element value in the i-th row and j-th column of the array should be i*j.
+# Note: i=0,1.., X-1; j=0,1,¡Y-1.
+# Example
+# Suppose the following inputs are given to the program:
+# 3,5
+# Then, the output of the program should be:
+# [[0, 0, 0, 0, 0],
+#  [0, 1, 2, 3, 4],
+#  [0, 2, 4, 6, 8]]
+
