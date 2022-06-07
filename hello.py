@@ -144,7 +144,7 @@
 # print(','.join(value))
 
 
-# Question:   5/23-3
+# Question:   6/6-1
 # Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array.
 # The element value in the i-th row and j-th column of the array should be i*j.
 # Note: i=0,1.., X-1; j=0,1,¡Y-1.
@@ -155,4 +155,21 @@
 # [[0, 0, 0, 0, 0],
 #  [0, 1, 2, 3, 4],
 #  [0, 2, 4, 6, 8]]
+
+# Solution:
+# input_str = input()
+# dimensions=[int(x) for x in input_str.split(',')]
+#横取值
+# rowNum=dimensions[0]
+#列取值
+# colNum=dimensions[1]
+#在列表中插入列表
+# 3 for i in range(3) => [3,3,3]
+# multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
+# for row in range(rowNum):
+#     for col in range(colNum):
+#         multilist[row][col]= row*col
+# print(multilist)
+
+
 
