@@ -165,11 +165,127 @@
 # colNum=dimensions[1]
 #在列表中插入列表
 # 3 for i in range(3) => [3,3,3]
+
+# my_list = [[0,0,0] for i in range(3)]
+# print(my_list)
+
 # multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
+#[[0,0,0],[0,0,0],[0,0,0]]
+
 # for row in range(rowNum):
 #     for col in range(colNum):
 #         multilist[row][col]= row*col
 # print(multilist)
+#总结思路：直接生成[[0,0,0],[0,0,0],[0,0,0]]二维数组，利用range()函数，重新遍历赋值
 
 
+# Question: 6/9-1
+# Write a program that accepts a comma separated sequence of words
+# as input and prints the words in a comma-separated sequence after sorting them alphabetically.
+# Suppose the following input is supplied to the program:
+# without,hello,bag,world
+# Then, the output should be:
+# bag,hello,without,world
+
+# input_str = input()
+# word = input_str.split(',')
+# word.sort()
+# print(','.join(word))
+
+#注意：sort()对原表进行列表排序，对原表直接操作，并不会返回一个新的列表，sort()方法需要单独使用
+
+# Solution:
+# ```python
+# items=[x for x in input().split(',')]
+# items.sort()
+# print(','.join(items))
+
+
+# Question£º  6/9-2
+# Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
+# Suppose the following input is supplied to the program:
+# Hello world
+# Practice makes perfect
+# Then, the output should be:
+# HELLO WORLD
+# PRACTICE MAKES PERFECT
+
+
+#补充：lower()大写字母转化成小写字母，swapcase()原大写变小写，小写变大写，title()首字母首字母转为大写，upper()小写
+# upper()生成了新的字符串
+
+# intems = input()
+# intem = intems.upper()
+# print(intem)
+
+# Solution:
+# lines = []
+# while True:
+#     s = input()
+#     if s:
+#         lines.append(s.upper())
+#     else:
+#         break;
+# for sentence in lines:
+#     print(sentence)
+
+# Question:   6/14-1
+# Write a program that accepts a sequence of whitespace separated words as input and
+# prints the words after removing all duplicate words and sorting them alphanumerically.
+# Suppose the following input is supplied to the program:
+# hello world and practice makes perfect and hello world again
+# Then, the output should be:
+# again and hello makes perfect practice world
+
+# input_str = [x for x in input().split(' ')]
+# my_list = []
+# for i in range(len(input_str)):
+#     if input_str[i] not in my_list:
+#         my_list.append(input_str[i])
+# my_list.sort()
+# print(' '.join(my_list))
+
+# Solution:
+#学习 ：set()函数创建一个无序不重复元素集，可进行关系测试，删除重复数据，还可以计算交集、差集、并集
+# 返回新的集合对象
+# s = input()
+# words = [word for word in s.split(" ")]
+# print(" ".join(sorted(list(set(words)))))
+
+
+
+# Question:   6/14 -2
+# Write a program which accepts a sequence of comma separated 4 digit binary numbers as its input
+# and then check whether they are divisible by 5 or not.
+# The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+# Example:
+# 0100,0011,1010,1001
+# Then the output should be:
+# 1010
+
+# input_str = [int(x) for x in input().split(',')]
+# my_list = []
+# for i in input_str:
+#     if i % 5 == 0:
+#         my_list.append(i)
+# print(my_list)
+
+# 结果：
+# 0100,0011,1010,1001
+# [100, 1010]
+
+# Solution:
+#学习：int(x,base=10) int()函数用于将一个字符串或者数字转化为整形   x--字符串 base--进制数，默认十进制
+# value = []
+# items=[x for x in input().split(',')]
+# for p in items:
+#     intp = int(p, 2)
+#     if not intp%5:
+#         value.append(p)
+# print(','.join(value))
+
+# Question:
+# Write a program, which will find all such numbers between 1000 and 3000 (both included) such that
+# each digit of the number is an even number.
+# The numbers obtained should be printed in a comma-separated sequence on a single line.
 
